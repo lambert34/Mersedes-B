@@ -1,0 +1,480 @@
+html {
+    box-sizing: border-box;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 120%;
+  font-size: 16px;
+  font-weight: 400;
+  background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
+  color: #fff;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  /* max-width: 100%; */
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+    font-family: 'Corporate-A-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/Corporate-A-Bold.woff2) format('woff2'),
+    url(../fonts/Corporate-A-Bold.woff) format('woff');
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+} 
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header {
+    background: #070A1B;
+}
+
+.header__logo {
+margin-left: 150px;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header__nav {
+
+}
+
+.header__nav-img {
+
+}
+
+.logo {
+
+}
+
+.logo__img {
+
+}
+
+.list {
+display: flex;
+}
+
+.list__item + .list__item {
+margin-left: 30px;
+}
+
+.list__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background .3s;
+}
+
+.list__link:hover {
+    background-color: #C1A1D2;
+}
+
+.list__img {
+
+}
+
+.header__content {
+    background-image: url(../images/car-pick.png);
+    min-height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.header__content::before {
+    content: "";
+    background-image: url(../images/logo-simbol.svg);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+}
+
+.title {
+    font-family: 'Corporate-A-Bold';
+    margin-bottom: 5px;
+    font-size: 72px;
+    line-height: 120%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title-descr {
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+}
+
+/* ---------SECTION---------------- */
+
+.concept {
+    padding-top: 150px;
+    margin-bottom: 150px;
+}
+
+.concept__inner {
+    max-width: 900px;
+    margin-left: auto;
+}
+.concept__title {
+}
+.section__title {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #F402A2;
+    font-size: 18px;
+    font-family: 'Corporate-A-Bold';
+}
+.concept__text {
+    font-size: 24px;
+    margin-bottom: 25px;
+    line-height: 120%;
+}
+.concept__img {
+}
+
+/* ---------Section-2 ----------------- */
+
+.premier {
+    margin-bottom: 150px;
+}
+
+.premier__inner {
+    display: flex;
+    gap: 60px;
+}
+.premier__column {
+}
+.section__title {
+}
+.premier__text {
+    margin-bottom: 18px;
+}
+.premier__img {
+    margin-bottom: 20px;
+}
+
+.premier__btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    line-height: 120%;
+    color: #F402A2;
+    text-transform: uppercase;
+    font-family: 'Corporate-A-Bold';
+    padding: 14px;
+    border: 1px solid #F402A2;
+    transition: all .3s;
+}
+
+.premier__btn:hover {
+    color: #53A1CB;
+    border: 1px solid #53A1CB;
+}
+
+
+.video {
+    margin-bottom: 150px;
+}
+.video__img {
+    margin-bottom: 25px;
+}
+.video__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 120%;
+    color: #F402A2;
+    text-transform: uppercase;
+    font-family: 'Corporate-A-Bold';
+    padding: 14px;
+    border: 1px solid #F402A2;
+    transition: all .3s;
+}
+
+.video__btn:hover {
+    color: #53A1CB;
+    border: 1px solid #53A1CB;
+}
+
+.video__btn:hover svg {
+    fill: #53A1CB;
+}
+
+.video__btn svg {
+    transition: all .3s;
+}
+
+/* ---------BIG Section Design */
+
+
+.design {
+}
+.container {
+}
+.design__interior {
+    display: grid;
+    grid-template-columns: 255px 255px auto 330px;
+    grid-template-rows: auto auto;
+    gap: 14px 44px;
+    margin-bottom: 100px;
+}
+
+.design__cell {
+
+}
+
+
+.design__cell-one {
+    grid-row: 1/3;
+}
+
+.design__cell-two {
+    grid-row-end: -1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.design__cell-three {
+    grid-column-end: -1;
+    grid-row-end: -1;
+    display: flex;
+    align-items: flex-end;
+}
+.section__title {
+}
+.design__cell-text {
+    margin-bottom: 15px;
+}
+.design__interior-img {
+    grid-column: 2/-1;
+}
+
+/* -----------SLIDER---------------- */
+
+.design-slider {
+    display: flex;
+    padding-bottom: 25px;
+}
+.design-slider__item {
+    margin: 0 30px;
+}
+
+.slick-track {
+    margin-left: -30px;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    bottom: 0;
+    left: 50%;
+}
+
+.arrow-left {
+    transform: translateX(-80px);
+}
+
+.arrow-right {
+    transform: translateX(30px);
+}
+
+/* ------------Last section---------- */
+
+.design__box {
+    display: flex;
+    max-width: 590px;
+    padding: 0 10px;
+    gap: 60px;
+    margin: 150px auto;
+}
+
+.design__box-column {
+    width: 255px;
+}
+
+.design__box-text {
+    margin-bottom: 15px;
+}
+
+.design__img {
+    max-width: 100%;
+    display: block;
+}
+
+/* -----------------FOOTER------------- */
+.footer {
+    background: #070A1B;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+
+/* ---------- BrPoints ---------- */
+
+img {
+    max-width: 100%;
+}
+
+@media(max-width: 768px){
+    .header__logo {
+        margin-left: 0;
+    }
+    .logo__img{
+        width: 180px;
+    }
+    .list__item + .list__item{
+        margin-left: 15px;
+    }
+    .list__link{
+        width: 35px;
+        height: 35px;
+    }
+    .title {
+        font-size: 55px;
+    }
+    .title-descr {
+        font-size: 18px;
+    }
+    .concept {
+        padding-top: 75px;
+        margin-bottom: 75px;
+    }
+    .concept__text {
+        font-size: 16px;
+    }
+    .premier__inner {
+        display: block;
+    }
+    .premier,
+    .video {
+        margin-bottom: 75px;
+    }
+    .premier__img {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+@media(max-width: 520px) {
+    .header__top{
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .list {
+        justify-content: center;
+        padding-top: 10px;
+        width: 100%;
+    }
+}
